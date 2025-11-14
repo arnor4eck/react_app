@@ -1,0 +1,30 @@
+.progressHeader{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.5 ) 0%, rgba(111, 232, 220, 0.9) 100%);
+    padding: 20px;
+    align-items: center;
+}
+
+
+.progress__bar {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 6px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.progress__bar--line {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    background: linear-gradient(90deg, #a2641d, #2a92b3);
+    transition: width .6s ease;
+    border-radius: 6px;
+}
