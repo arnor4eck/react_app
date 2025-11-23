@@ -9,22 +9,6 @@
 }
 
 
-.progress__bar {
-    display: flex;
-    border: 1px solid black;
-    border-radius: 6px;
+.progress-bar {
     width: 100%;
-    overflow: hidden;
-}
-
-.progress__bar--line {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    white-space: nowrap;
-    background: linear-gradient(90deg, #a2641d, #2a92b3);
-    transition: width .6s ease;
-    border-radius: 6px;
 }

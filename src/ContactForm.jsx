@@ -120,8 +120,7 @@ function ContactForm() {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          placeholder="+7 (999) 999-99-99"
-        />
+          placeholder="+7 (999) 999-99-99" />
       </div>
 
       {/* Поле сообщения */}

@@ -1,3 +1,4 @@
+import ProgressBar from './progressbar/ProgressBar';
 import './ProgressHeader.css'
 
 function ProgressHeader({technologies = []}) {
@@ -17,11 +18,8 @@ function ProgressHeader({technologies = []}) {
                 <p>Изучено: {doneTechs}</p>
                 <p>В процессе изучения: {progressTechs}</p>
             </div>
-            <div className='progress__bar'>
-                <div className="progress__bar--line" 
-                    style={{ width: `${Math.floor(doneTechs / technologies.length * 100)}%` }}>
-                    {Math.floor(doneTechs / technologies.length * 100)}%
-                </div>
+            <div className='progress-bar'>
+                <ProgressBar progress={Math.floor(doneTechs / technologies.length * 100)} />
             </div>
         </div>
     );
