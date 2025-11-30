@@ -1,0 +1,100 @@
+/* Home.css */
+.home-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.quick-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.btn--primary {
+  background: #6366f1;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.btn--secondary {
+  background: #f3f4f6;
+  color: #374151;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 1px solid #d1d5db;
+}
+
+.recent-technologies {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tech-preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.hello-section{
+    border-radius: 15px;
+    padding: 15px;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.5 ) 0%, rgba(111, 232, 220, 0.9) 100%);
+}
+
+.tech-preview-card {
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.see-more-link {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+}

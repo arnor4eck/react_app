@@ -84,5 +84,5 @@ export default function useTechnologies(){
         );
     };
 
-    return { technologies, setAllDone, setAllPending, randomNextTech, updateTechnologyNotes, updateTech }
+    return { technologies, setAllDone, setAllPending, randomNextTech, updateTechnologyNotes, updateTech, updateTechStatus }
 }
