@@ -1,10 +1,9 @@
-// pages/Technologies.jsx
 import { useState, useEffect } from 'react';
-import TechnologyCard from '../components/TechnologyCard';
-import ProgressHeader from '../components/ProgressHeader';
-import QuickActions from '../components/QuickActions';
-import FilterActions from '../components/filters/FilterActions';
-import useTechnologies from '../components/UseTechnologies';
+import TechnologyCard from '../../components/TechnologyCard';
+import ProgressHeader from '../../components/progressbar/ProgressHeader';
+import QuickActions from '../../components/filters/QuickActions';
+import FilterActions from '../../components/filters/FilterActions';
+import useTechnologies from '../../hooks/UseTechnologies';
 
 export default function Technologies() {
   const { technologies, setAllDone, setAllPending, 

@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import useTechnologies from '../components/UseTechnologies';
+import useTechnologies from '../../hooks/UseTechnologies';
 import './TechnologyDetail.css';
 
 function TechnologyDetail() {
@@ -61,6 +61,8 @@ function TechnologyDetail() {
     'done': '#10b981'
   };
 
+  console.log(technology)
+
   return (
     <div className="page technology-detail-page">
       <div className="technology-detail">
@@ -76,12 +78,12 @@ function TechnologyDetail() {
           </div>
 
           <div className="detail-section">
-            <h3>📝 Описание</h3>
+            <h3>Описание</h3>
             <p>{technology.description || 'Описание отсутствует'}</p>
           </div>
 
           <div className="detail-section">
-            <h3>🎯 Статус изучения</h3>
+            <h3>Статус изучения</h3>
             <div className="status-buttons">
               <button
                 onClick={() => updateStatus('pending')}
@@ -108,14 +110,25 @@ function TechnologyDetail() {
           </div>
 
           <div className="detail-section">
+            <h3>Ресурсы для изучения</h3>
+            <div className="resources-list">
+                {technology.resources.map(res => {
+                    return <div className='resource'>
+                        {res}
+                    </div>
+                })}
+            </div>
+          </div>
+
+          <div className="detail-section">
             <div className="notes-header">
-              <h3>📓 Мои заметки</h3>
+              <h3>Мои заметки</h3>
               {!isEditing ? (
                 <button 
                   onClick={() => setIsEditing(true)}
                   className="btn btn--outline"
                 >
-                  ✏️ Редактировать
+                  Редактировать
                 </button>
               ) : (
                 <div className="notes-actions">
@@ -123,7 +136,7 @@ function TechnologyDetail() {
                     onClick={handleSaveNotes}
                     className="btn btn--primary"
                   >
-                    💾 Сохранить
+                    Сохранить
                   </button>
                   <button 
                     onClick={() => {
@@ -132,7 +145,7 @@ function TechnologyDetail() {
                     }}
                     className="btn btn--secondary"
                   >
-                    ❌ Отмена
+                    Отмена
                   </button>
                 </div>
               )}

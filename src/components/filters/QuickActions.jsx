@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Modal from './modal/Modal';
+import Modal from '../modal/Modal';
 import './QuickActions.css'
 
 function QuickActions({setAllDone, setAllPending, randomNextTech, technologies}) {

@@ -23,6 +23,13 @@ export default function Navigation() {
                     </Link>
                 </li>
 
+                {/*<li>
+                    <Link to="/technologies_api" className={location.pathname === '/technologies_api' ? 'nav-link active' : 'nav-link'}>
+                        Все технологии API
+                    </Link>
+                </li>*/}
+
+
                 <li>
                     <Link to="/statistics" className={location.pathname === '/statistics' ? 'nav-link active' : 'nav-link'}>
                         Статистика
@@ -38,6 +45,18 @@ export default function Navigation() {
                 <li>
                     <Link to="/add-technology" className={location.pathname === '/add-technology' ? 'nav-link active' : 'nav-link'}>
                         Добавить технологию
+                    </Link>
+                </li>
+
+                <li>
+                    <Link to='/books' className={location.pathname === '/books' ? 'nav-link active' : 'nav-link'}>
+                        Книги
+                    </Link>
+                </li>
+
+                <li>
+                    <Link to='/books_search' className={location.pathname === '/books_search' ? 'nav-link active' : 'nav-link'}>
+                        Книги поиск
                     </Link>
                 </li>
             </ul>

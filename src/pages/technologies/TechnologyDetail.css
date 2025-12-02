@@ -187,3 +187,16 @@
   border: 1px solid #d1d5db;
   color: #374151;
 }
+
+.resources-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.resource{
+  background-color: grey;
+  text-align: center;
+  border-radius: 15px;
+  padding: 5px;
+}

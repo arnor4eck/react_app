@@ -10,7 +10,7 @@ function TechnologyCard({id, title, description, status, change, notes, updateTe
                 <p>{description}</p>
             </div>
             <div className='technology__card--bottom'>
-                <TechnologyNotes notes={notes} onNotesChange={updateTechnologyNotes} techId={id} />
+                {/*<TechnologyNotes notes={notes} onNotesChange={updateTechnologyNotes} techId={id} />*/}
                 <div className='technology__card--actions'>
                     <Link className={"technology__card--status technology__card--status--" + status} to={`/technology/${id}`}>Подробнее</Link>
                     <button onClick={() => change(id)} className={"technology__card--status technology__card--status--" + status}>{status}</button>

@@ -1,4 +1,4 @@
-import ProgressBar from './progressbar/ProgressBar';
+import ProgressBar from './ProgressBar';
 import './ProgressHeader.css'
 
 function ProgressHeader({technologies = []}) {

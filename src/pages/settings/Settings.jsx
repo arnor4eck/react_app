@@ -1,4 +1,3 @@
-import useLocalStorage from "../components/UseLocalStorage"
 import './Settings.css'
 
 export default function Settings({savedBackground, setSavedBackground}) {

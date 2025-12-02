@@ -1,9 +1,9 @@
-import useLocalStorage from "./UseLocalStorage"
+import useLocalStorage from "./UseLocalStorage";
 
 const initTechnologies = [
-    { id: 1, title: 'React Components', description: 'Изучение базовых компонентов', status: 'pending', notes: '', category: 'backend' },
-    { id: 2, title: 'JSX Syntax', description: 'Освоение синтаксиса JSX', status: 'done', notes: '', category: 'backend' },
-    { id: 3, title: 'State Management', description: 'Работа с состоянием компонентов', status: 'progress', notes: '', category: 'backend' }
+    { id: 1, title: 'React Components', description: 'Изучение базовых компонентов', status: 'pending', notes: '', category: 'backend', difficulty: 'intermediate', resources: ['https://nodejs.org', 'https://nodejs.org/ru/docs/'] },
+    { id: 2, title: 'JSX Syntax', description: 'Освоение синтаксиса JSX', status: 'done', notes: '', category: 'backend', difficulty: 'intermediate', resources: ['https://nodejs.org', 'https://nodejs.org/ru/docs/'] },
+    { id: 3, title: 'State Management', description: 'Работа с состоянием компонентов', status: 'progress', notes: '', category: 'backend', difficulty: 'intermediate', resources: ['https://nodejs.org', 'https://nodejs.org/ru/docs/'] },
 ]
 
 export default function useTechnologies(){
@@ -11,11 +11,9 @@ export default function useTechnologies(){
 
     const updateTechStatus = (id, newStatus) => {
         setTechnologies(prevTech => 
-            prevTech.map(tech => {
-                if(tech.id === id)
-                    return { ...tech, status: newStatus };
-                return tech;
-            })
+            prevTech.map(tech => 
+                tech.id === id ? { ...tech, status: newStatus } : tech
+            )
         )
     }
 
@@ -39,18 +37,14 @@ export default function useTechnologies(){
     };
 
     const setAllDone = () => {
-        setTechnologies(prevTechs =>
-            prevTechs.map(
-                tech => updateTechStatus(tech.id, 'done')
-            )
-        )
+        setTechnologies(prevTechs => 
+            prevTechs.map(tech => ({ ...tech, status: 'done' }))
+        );
     }
 
     const setAllPending = () => {
         setTechnologies(prevTechs =>
-            prevTechs.map(
-                tech => updateTechStatus(tech.id, 'pending')
-            )
+            prevTechs.map(tech => ({ ...tech, status: 'pending' }))
         )
     }
 
